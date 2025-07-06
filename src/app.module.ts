@@ -8,6 +8,7 @@ import { AppService } from './app.service';
 import { environments } from './commons/config/environments';
 import { CategoriesModule } from './categories/categories.module';
 import { TechnologiesModule } from './technologies/technologies.module';
+import { CertificatesModule } from './certificates/certificates.module';
 import config from './config';
 
 const env = process.env.NODE_ENV ?? '.env';
@@ -26,7 +27,8 @@ const env = process.env.NODE_ENV ?? '.env';
     }),
     HttpModule,
     CategoriesModule,
-    TechnologiesModule
+    TechnologiesModule,
+    CertificatesModule
   ],
   controllers: [AppController],
   providers: [AppService],
