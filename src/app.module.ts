@@ -6,6 +6,7 @@ import * as Joi from 'joi';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { environments } from './commons/config/environments';
+import { CategoriesModule } from './categories/categories.module';
 import config from './config';
 
 const env = process.env.NODE_ENV ?? '.env';
@@ -22,7 +23,8 @@ const env = process.env.NODE_ENV ?? '.env';
         DATABASE_PORT: Joi.number().required()
       })
     }),
-    HttpModule
+    HttpModule,
+    CategoriesModule
   ],
   controllers: [AppController],
   providers: [AppService],
